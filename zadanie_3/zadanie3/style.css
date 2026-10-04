@@ -1,0 +1,27 @@
+:root {
+  --brand-primary: #1b6ec2;
+  --card-hover-offset: -5px;
+}
+
+.card-title,
+a.navbar-brand {
+  color: var(--brand-primary) !important;
+}
+
+article.card {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+  will-change: transform;
+}
+
+article.card:hover {
+  transform: translateY(var(--card-hover-offset));
+  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.12) !important;
+}
+
+article.card .card-img-top {
+  transition: opacity 0.2s ease;
+}
+
+article.card:hover .card-img-top {
+  opacity: 0.92;
+}
